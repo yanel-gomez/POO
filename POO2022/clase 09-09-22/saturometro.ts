@@ -8,7 +8,37 @@ class OximetroDePulso {
     constructor(nivelOxigeno: number, ritmoCardiaco: number, prendidoApagado: boolean) {
         this.nivelOxigeno = nivelOxigeno;
         this.ritmoCardiaco = ritmoCardiaco;
-        this.prendidoApagado = true;
+        this.prendidoApagado = prendidoApagado;
+    }
+
+    getNivelOxigeno():number{
+        return this.nivelOxigeno;
+    }
+
+    setNivelOxigeno(oxigeno:number):void{
+        this.nivelOxigeno = oxigeno;
+    }
+
+    getRitmoCardiaco():number{
+        return this.ritmoCardiaco;
+    }
+
+    setRitmoCardiaco(ritmo:number):void{
+        this.ritmoCardiaco = ritmo;
+    }
+
+    getPrendidoApagado():boolean{
+        return this.prendidoApagado;
+    }
+
+    setPrendidoApagado(onOff:boolean){
+        this.prendidoApagado= onOff;
+    }
+    getMarca():string{
+        return this.marca;
+    }
+    getModelo():string{
+        return this.modelo;
     }
 
 
@@ -21,11 +51,7 @@ class OximetroDePulso {
         console.log("Se prende")
     }
     }
-   
-    getNivelOxigeno():number{
-        return this.nivelOxigeno;
-    }
-
+         
     medirRitmoCardiaco():void {
         let contador = 0;
         let heartbeats: number = 1;
@@ -33,11 +59,7 @@ class OximetroDePulso {
             this.ritmoCardiaco = contador++
         }
     }
-
-    getRitmoCardiaco():number{
-        return this.ritmoCardiaco;
-    }
 }
     
 let primerSaturometro = new OximetroDePulso(95, 70, true);
-console.log(primerSaturometro.getNivelOxigeno);
+console.log(primerSaturometro.getNivelOxigeno());
