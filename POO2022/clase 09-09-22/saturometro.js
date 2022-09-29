@@ -3,6 +3,8 @@ var OximetroDePulso = /** @class */ (function () {
         this.nivelOxigeno = nivelOxigeno;
         this.ritmoCardiaco = ritmoCardiaco;
         this.prendidoApagado = prendidoApagado;
+        this.marca = "Beurer";
+        this.modelo = "PO 30";
     }
     OximetroDePulso.prototype.getNivelOxigeno = function () {
         return this.nivelOxigeno;
@@ -40,12 +42,16 @@ var OximetroDePulso = /** @class */ (function () {
     };
     OximetroDePulso.prototype.medirRitmoCardiaco = function () {
         var contador = 0;
-        var heartbeats = 1;
-        while (heartbeats <= 100 || heartbeats >= 60) {
-            this.ritmoCardiaco = contador++;
+        var heartbeats = contador++;
+        if (heartbeats <= 100 || heartbeats >= 60) {
+            console.log("Su ritmo cardíaco es normal.");
+        }
+        else {
+            console.log("Usted presenta arritmia cardíaca.");
         }
     };
     return OximetroDePulso;
 }());
 var primerSaturometro = new OximetroDePulso(95, 70, true);
 console.log(primerSaturometro.getNivelOxigeno());
+console.log(primerSaturometro.medirRitmoCardiaco());

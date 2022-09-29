@@ -9,6 +9,8 @@ class OximetroDePulso {
         this.nivelOxigeno = nivelOxigeno;
         this.ritmoCardiaco = ritmoCardiaco;
         this.prendidoApagado = prendidoApagado;
+        this.marca = "Beurer"
+        this.modelo = "PO 30"
     }
 
     getNivelOxigeno():number{
@@ -54,12 +56,15 @@ class OximetroDePulso {
          
     medirRitmoCardiaco():void {
         let contador = 0;
-        let heartbeats: number = 1;
-        while (heartbeats <= 100 || heartbeats >= 60) {
-            this.ritmoCardiaco = contador++
+        let heartbeats = contador++
+        if (heartbeats <= 100 || heartbeats >= 60) {
+            console.log("Su ritmo cardíaco es normal.")
+        }else{
+            console.log("Usted presenta arritmia cardíaca.")
         }
     }
 }
     
 let primerSaturometro = new OximetroDePulso(95, 70, true);
 console.log(primerSaturometro.getNivelOxigeno());
+console.log(primerSaturometro.medirRitmoCardiaco());
