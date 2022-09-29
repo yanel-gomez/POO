@@ -23,21 +23,43 @@ var Rectangulo = /** @class */ (function () {
         return this.altura;
     };
     Rectangulo.prototype.getArea = function () {
-        return (this.base * this.altura);
+        return (Math.pow(this.base, this.altura));
     };
-    Rectangulo.prototype.compareRectangles = function () {
-        var rec1 = 5;
-        var rec2 = 6;
-        if (rec1 < rec2) {
-            console.log("-1");
+    Rectangulo.prototype.compareRectangles = function (rec1, rec2) {
+        var valor;
+        if (rec1.getArea() > rec2.getArea()) {
+            valor = 1;
         }
-        else if (rec1 > rec2) {
-            console.log("1");
+        else if (rec1.getArea() == rec2.getArea()) {
+            valor = 0;
         }
-        else if (rec1 = rec2) {
-            console.log("0");
+        else {
+            valor = -1;
         }
+        return valor;
     };
+    /*    compararRectangulosOpcion2(rectangulo: Rectangulo): number {
+            let valor: number;
+            if (this.getArea() > rectangulo.getArea()) {
+                valor = 1;
+            } else if (this.getArea() == rectangulo.getArea()) {
+                valor = 0;
+            } else {
+                valor = -1;
+            }
+            return valor;
+        }
+        compararRectangulosOpcion3(areaRectangulo1: Rectangulo, areaRectangulo2: Rectangulo): number {
+            let valor: number;
+            if (areaRectangulo1.getArea() > areaRectangulo2.getArea()) {
+                valor = 1;
+            } else if (areaRectangulo1.getArea() == areaRectangulo2.getArea()) {
+                valor = 0;
+            } else {
+                valor = -1;
+            }
+            return valor;
+        } */
     Rectangulo.prototype.isSquare = function () {
         var base1 = this.base;
         var altura1 = this.altura;

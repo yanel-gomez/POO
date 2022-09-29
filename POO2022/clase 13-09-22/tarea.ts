@@ -28,19 +28,43 @@ class Rectangulo {
         return this.altura;
     }
     getArea():number{
-        return (this.base*this.altura)
+        return (this.base**this.altura)
     }
-   compareRectangles():void{
-        let rec1:number = 5
-        let rec2:number = 6
-        if (rec1<rec2){
-            console.log("-1");
-        }else if (rec1>rec2){
-            console.log("1");
-        }else if (rec1=rec2){
-            console.log("0");
+   compareRectangles(rec1:Rectangulo,rec2:Rectangulo):number{
+        let valor:number;
+        if (rec1.getArea()>rec2.getArea()){
+            valor = 1;
+        }else if (rec1.getArea() == rec2.getArea()){
+            valor= 0;
+        }else{
+            valor=-1
         }
+        return valor;
     }
+   
+/*    compararRectangulosOpcion2(rectangulo: Rectangulo): number {
+        let valor: number;
+        if (this.getArea() > rectangulo.getArea()) {
+            valor = 1;
+        } else if (this.getArea() == rectangulo.getArea()) {
+            valor = 0;
+        } else {
+            valor = -1;
+        }
+        return valor;
+    }
+    compararRectangulosOpcion3(areaRectangulo1: Rectangulo, areaRectangulo2: Rectangulo): number {
+        let valor: number;
+        if (areaRectangulo1.getArea() > areaRectangulo2.getArea()) {
+            valor = 1;
+        } else if (areaRectangulo1.getArea() == areaRectangulo2.getArea()) {
+            valor = 0;
+        } else {
+            valor = -1;
+        }
+        return valor;
+    } */
+
     isSquare():void{
         let base1= this.base;
         let altura1 = this.altura;
@@ -50,6 +74,7 @@ class Rectangulo {
             console.log("No es un cuadrado.")
         }
     }
+
     isVertical():void{
         if(this.base<this.altura){
         console.log("Este rectángulo está en posición vertical.")
