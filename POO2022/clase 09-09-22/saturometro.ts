@@ -9,8 +9,8 @@ class OximetroDePulso {
         this.nivelOxigeno = nivelOxigeno;
         this.ritmoCardiaco = ritmoCardiaco;
         this.prendidoApagado = prendidoApagado;
-        this.marca = "Beurer"
-        this.modelo = "PO 30"
+        this.marca = "Beurer";
+        this.modelo = "PO 30";
     }
 
     getNivelOxigeno():number{
@@ -47,20 +47,20 @@ class OximetroDePulso {
     prenderApagar(): void {
         if (this.prendidoApagado === true){
         this.prendidoApagado= false;
-        console.log("Se apaga")
+        console.log("Se apaga");
         }else{
         this.prendidoApagado=true;
-        console.log("Se prende")
+        console.log("Se prende");
     }
     }
          
     medirRitmoCardiaco():void {
         let contador = 0;
-        let heartbeats = contador++
+        let heartbeats = contador++;
         if (heartbeats <= 100 || heartbeats >= 60) {
-            console.log("Su ritmo cardíaco es normal.")
+            console.log("Su ritmo cardíaco es normal.");
         }else{
-            console.log("Usted presenta arritmia cardíaca.")
+            console.log("Usted presenta arritmia cardíaca.");
         }
     }
 }
