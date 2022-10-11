@@ -40,6 +40,6 @@ export class Libro{
         return this.editorial;
     }
     public toString():string{
-        return 'Titulo: ' + this.nombre +' \n '+ 'Cantidad de páginas: '+this.qPaginas +' \n '+ + 'Autor: '+this.autor +' \n ' + 'Editorial: '+this.editorial + '';
+        return 'Titulo: ' + this.nombre +' \n '+ 'Cantidad de páginas: '+this.qPaginas +' \n '+ 'Autor: '+this.autor +' \n ' + 'Editorial: '+this.editorial + '';
     }
 }

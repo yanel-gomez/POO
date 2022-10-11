@@ -8,4 +8,4 @@ var libro3 = new libro_1.Libro("Introducción a la Programación", 256, "P.W.", 
 var arregloDeLibros = [libro1, libro2, libro3];
 var librería1 = new gestor_1.GestorLibros(arregloDeLibros);
 console.log(librería1.consultarLibro(libro2));
-console.log(librería1.toString());
+console.log(librería1.toStringGestor());

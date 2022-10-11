@@ -37,6 +37,9 @@ var GestorLibros = /** @class */ (function () {
             }
         }
     };
+    GestorLibros.prototype.toStringGestor = function () {
+        return this.listadoDeLibros.toString();
+    };
     return GestorLibros;
 }());
 exports.GestorLibros = GestorLibros;

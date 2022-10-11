@@ -33,7 +33,7 @@ var Libro = /** @class */ (function () {
         return this.editorial;
     };
     Libro.prototype.toString = function () {
-        return 'Titulo: ' + this.nombre + ' \n ' + 'Cantidad de páginas: ' + this.qPaginas + ' \n ' + +'Autor: ' + this.autor + ' \n ' + 'Editorial: ' + this.editorial + '';
+        return 'Titulo: ' + this.nombre + ' \n ' + 'Cantidad de páginas: ' + this.qPaginas + ' \n ' + 'Autor: ' + this.autor + ' \n ' + 'Editorial: ' + this.editorial + '';
     };
     return Libro;
 }());

@@ -9,4 +9,4 @@ let arregloDeLibros:Array<Libro> = [libro1,libro2,libro3];
 let librería1:GestorLibros = new GestorLibros(arregloDeLibros);
 
 console.log(librería1.consultarLibro(libro2));
-console.log(librería1.toString());
+console.log(librería1.toStringGestor());

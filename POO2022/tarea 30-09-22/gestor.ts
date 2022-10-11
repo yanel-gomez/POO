@@ -50,6 +50,9 @@ export class GestorLibros{
             }
         }
     }
+    toStringGestor():string{
+        return this.listadoDeLibros.toString()
+    }
+   }
 
-}
 
