@@ -1,0 +1,15 @@
+"use strict";
+exports.__esModule = true;
+var CheckingAccount_1 = require("./CheckingAccount");
+var SavingsAccount_1 = require("./SavingsAccount");
+var Person_1 = require("./Person");
+var Yanel = new Person_1.Person("Yanel", "Gomez", 98765432);
+var myCheckingAccount = new CheckingAccount_1.CheckingAccount(852963741, Yanel);
+var mySavingsAccount = new SavingsAccount_1.SavingsAccount(233365204, Yanel);
+mySavingsAccount.deposit(25000);
+mySavingsAccount.setInterest(2);
+mySavingsAccount.updateBalance();
+console.log(mySavingsAccount.toString());
+myCheckingAccount.deposit(15000);
+console.log(myCheckingAccount.withdraw(20000));
+console.log(myCheckingAccount.toString());
