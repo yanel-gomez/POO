@@ -11,5 +11,5 @@ mySavingsAccount.setInterest(2);
 mySavingsAccount.updateBalance();
 console.log(mySavingsAccount.toString());
 myCheckingAccount.deposit(15000);
-console.log(myCheckingAccount.withdraw(20000));
+myCheckingAccount.withdraw(20000);
 console.log(myCheckingAccount.toString());
